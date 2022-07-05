@@ -117,6 +117,7 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
             if(findViewById(R.id.trash_notes_fragment).isShown()){
                 getSupportFragmentManager().beginTransaction().replace(R.id.notes_fragment_container, new NotesFragment()).commit();
                 navigationView.getMenu().getItem(0).setChecked(true);
+
                 Log.d(TAG, "onBackPressed: visible" + R.id.trash_notes_fragment);
             }
 
@@ -142,6 +143,11 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
         }
         else if(drawerLayout.isDrawerOpen(GravityCompat.START))
             drawerLayout.closeDrawer(GravityCompat.START);
+        else if(findViewById(R.id.notes_fragment)!=null){
+            if(findViewById(R.id.notes_fragment).isShown()){
+                finish();
+            }
+        }
         else
             super.onBackPressed();
     }
