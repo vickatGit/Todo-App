@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+
+    app:cardElevation="0.6dp"
+
+    app:cardCornerRadius="20dp"
+    app:cardPreventCornerOverlap="false"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:contentPadding="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:textColor="#404040"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:paddingStart="10dp"/>
+    <TextView
+        android:textColor="#9f9f9f"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:textSize="15sp"
+        android:paddingStart="10dp"
+        android:ellipsize="marquee"
+        android:text="orginal note items content goes here we are adding just sample text to see how it looks in a Previewso here we are adding sample text so e can design th e layout efficienty Previewso here we are adding sample text so e can design th e layout efficienty "/>
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_marginTop="7dp"
+        android:textSize="10sp"
+        android:textColor="#9f9f9f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:text="01/07/2022"/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/trash_note_item_fragment"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.TrashNoteItemFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/trash_note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="15dp" />
+
+        <TextView
+            android:id="@+id/trash_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="In content Box"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/trash_note_title"
+            tools:layout_editor_absoluteX="15dp" />
+
+        <Button
+            android:id="@+id/restore_note"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="10dp"
+            android:text="Restore Note"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:backgroundTint="#00BFA5"
+            app:icon="@drawable/restore_icon"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="25dp" />
+
+        <Button
+            android:id="@+id/delete_note_permanently"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
+            android:padding="10dp"
+            android:text="Delete Note"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="19sp"
+            android:backgroundTint="#FF4242"
+            app:icon="@drawable/restore_icon"
+            app:iconGravity="textStart"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/restore_note"
+            tools:layout_editor_absoluteX="25dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>
