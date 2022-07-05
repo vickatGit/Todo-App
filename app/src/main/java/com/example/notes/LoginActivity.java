@@ -46,22 +46,22 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
         Log.d(TAG, "onCreate: ");
-//        loginViewModel = new ViewModelProvider(this).get(SignupLoginViewModel.class);
-//        loginViewModel.getUser().observe(this, new Observer<List<UserEntity>>() {
-//            @Override
-//            public void onChanged(List<UserEntity> userEntities) {
-//                Log.d(TAG, "onChanged: "+userEntities.size());
-//                if(userEntities.size()>0) {
-//                    if (userEntities.get(0).getUser_name() != null) {
-//                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-//                        intent.putExtra("userId",userEntities.get(0).getUser_id());
-//                        intent.putExtra("userName",userEntities.get(0).getUser_name());
-//                        startActivity(intent);
-//                        finish();
-//                    }
-//                }
-//            }
-//        });
+        loginViewModel = new ViewModelProvider(this).get(SignupLoginViewModel.class);
+        loginViewModel.getUser().observe(this, new Observer<List<UserEntity>>() {
+            @Override
+            public void onChanged(List<UserEntity> userEntities) {
+                Log.d(TAG, "onChanged: "+userEntities.size());
+                if(userEntities.size()>0) {
+                    if (userEntities.get(0).getUser_name() != null) {
+                        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                        intent.putExtra("userId",userEntities.get(0).getUser_id());
+                        intent.putExtra("userName",userEntities.get(0).getUser_name());
+                        startActivity(intent);
+                        finish();
+                    }
+                }
+            }
+        });
         initialise();
         signup.setOnClickListener(new View.OnClickListener() {
             @Override

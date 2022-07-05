@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -197,6 +198,17 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
         toolbar_title.setTypeface(ResourcesCompat.getFont(this,R.font.montserratbold));
         toolbar_title.setText(my_notes);
     }
+    public void setToolbarColor(boolean isColor){
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        if(isColor){
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar_color)));
+        }
+        else {
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));
+        }
+    }
+
+
 
 
 }

@@ -78,6 +78,10 @@ public class HomeActivityandFragmentsViewModel extends AndroidViewModel {
         homeActivity.setToolbartext(title);
     }
 
+    public void setToolbarColor(boolean isColor){
+        homeActivity.setToolbarColor(isColor);
+    }
+
     public void deleteNotePermanently(String noteId) {
         repository.deleteNotePermanently(noteId);
     }

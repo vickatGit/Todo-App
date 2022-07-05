@@ -5,7 +5,7 @@
     android:orientation="vertical"
     app:cardElevation="1.5dp"
 
-    app:cardCornerRadius="5dp"
+    app:cardCornerRadius="20dp"
     app:cardPreventCornerOverlap="false"
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Title"
         android:textStyle="bold"
-        android:textSize="25sp"
+        android:textSize="17sp"
         android:paddingStart="10dp"/>
     <TextView
         android:id="@+id/content"

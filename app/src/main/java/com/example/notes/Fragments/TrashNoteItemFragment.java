@@ -82,6 +82,7 @@ public class TrashNoteItemFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new  ViewModelProvider(getActivity()).get(HomeActivityandFragmentsViewModel.class);
         viewModel.setToolbartext(" ");
+        viewModel.setToolbarColor(false);
 
     }
 }

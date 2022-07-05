@@ -56,6 +56,7 @@ public class NoteItemFragment extends Fragment {
         if(context instanceof UpdateNote){
             this.homeActivity= (HomeActivity) context;
             homeActivity.setToolbartext(" ");
+            homeActivity.setToolbarColor(false);
         }
 
     }
