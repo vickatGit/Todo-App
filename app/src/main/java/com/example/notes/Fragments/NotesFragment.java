@@ -83,6 +83,7 @@ public class NotesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(getActivity()).get(HomeActivityandFragmentsViewModel.class);
         viewModel.setToolbartext("My Notes");
+        viewModel.setToolbarColor(true);
          viewModel.getNotes().observe(getViewLifecycleOwner(), new Observer<List<NoteModel>>() {
 
             @Override

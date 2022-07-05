@@ -61,6 +61,7 @@ public class TrashedNotesFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(getActivity()).get(HomeActivityandFragmentsViewModel.class);
         viewModel.setToolbartext("Trashed Notes");
+        viewModel.setToolbarColor(true);
         trashNotesFragmentAdapter = new TrashNotesFragmentAdapter(this.getContext(),trashedNotes,viewModel.getParentActivity());
         trashNotesRecyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
         trashNotesRecyclerView.setAdapter(trashNotesFragmentAdapter);
