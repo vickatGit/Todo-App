@@ -76,6 +76,7 @@ public class HomeActivityandFragmentsViewModel extends AndroidViewModel {
 
     public void setToolbartext(String title){
         homeActivity.setToolbartext(title);
+
     }
 
     public void setToolbarColor(boolean isColor){

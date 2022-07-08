@@ -44,6 +44,7 @@ public class NotesFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: ");
 
 
     }
@@ -51,6 +52,7 @@ public class NotesFragment extends Fragment {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
+        Log.d(TAG, "onAttach: ");
         if(context instanceof newNoteMessage ){
             this.homeActivity= (HomeActivity) context;
             homeActivity.setToolbartext("My Notes");
@@ -60,6 +62,9 @@ public class NotesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: ");
+        homeActivity.navigationView.getMenu().getItem(0).setChecked(true);
+
         View view=inflater.inflate(R.layout.fragment_notes, container, false);
         recyclerView=view.findViewById(R.id.all_notes);
         FloatingActionButton addNote=view.findViewById(R.id.floating_action_button);
@@ -78,9 +83,14 @@ public class NotesFragment extends Fragment {
         void newNoteMessage();
     }
 
+    public NotesFragment(int contentLayoutId) {
+        super(contentLayoutId);
+    }
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.d(TAG, "onViewCreated: ");
         viewModel = new ViewModelProvider(getActivity()).get(HomeActivityandFragmentsViewModel.class);
         viewModel.setToolbartext("My Notes");
         viewModel.setToolbarColor(true);

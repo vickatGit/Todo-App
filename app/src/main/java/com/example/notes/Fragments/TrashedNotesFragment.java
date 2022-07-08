@@ -45,9 +45,18 @@ public class TrashedNotesFragment extends Fragment {
     }
 
     @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        if(context instanceof TrashedNote){
+            homeActivity= (HomeActivity) context;
+        }
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        homeActivity.navigationView.getMenu().getItem(1).setChecked(true);
         View view=inflater.inflate(R.layout.fragment_trashed_notes, container, false);
         trashNotesRecyclerView = view.findViewById(R.id.trash_notes);
 

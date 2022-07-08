@@ -35,11 +35,11 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.List;
 
-public class HomeActivity extends AppCompatActivity implements NotesFragment.newNoteMessage, NoteItemFragment.UpdateNote{
+public class HomeActivity extends AppCompatActivity implements NotesFragment.newNoteMessage, NoteItemFragment.UpdateNote,TrashedNotesFragment.TrashedNote{
 
     private static final String TAG = "tag";
     DrawerLayout drawerLayout;
-    NavigationView navigationView;
+    public NavigationView navigationView;
     HomeActivityandFragmentsViewModel viewModel;
     private String userId;
     Button signOut;
@@ -121,25 +121,12 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
 
                 Log.d(TAG, "onBackPressed: visible" + R.id.trash_notes_fragment);
             }
-
         }
         else if(findViewById(R.id.new_note_fragment)!=null) {
-            if (findViewById(R.id.new_note_fragment).getId() == R.id.new_note_fragment) {
+            if (findViewById(R.id.new_note_fragment).isShown()) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.notes_fragment_container, new NotesFragment()).commit();
                 navigationView.getMenu().getItem(0).setChecked(true);
                 Log.d(TAG, "onBackPressed: visible" + R.id.new_note_fragment);
-            }
-        }
-        else if(findViewById(R.id.trash_note_item_fragment)!=null){
-            if(findViewById(R.id.trash_note_item_fragment).isShown()){
-                navigationView.getMenu().getItem(1).setChecked(true);
-                getSupportFragmentManager().popBackStack();
-            }
-        }
-        else if(findViewById(R.id.note_item_fragment)!=null){
-            if(findViewById(R.id.note_item_fragment).isShown()){
-                navigationView.getMenu().getItem(0).setChecked(true);
-                getSupportFragmentManager().popBackStack();
             }
         }
         else if(drawerLayout.isDrawerOpen(GravityCompat.START))
@@ -199,7 +186,6 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
         toolbar_title.setText(my_notes);
     }
     public void setToolbarColor(boolean isColor){
-        Toolbar toolbar=findViewById(R.id.toolbar);
         if(isColor){
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar_color)));
         }
@@ -209,6 +195,8 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
     }
 
 
+    @Override
+    public void trashedNoteItem(NoteModel note) {
 
-
+    }
 }
