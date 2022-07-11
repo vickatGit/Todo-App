@@ -7,8 +7,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
@@ -18,11 +16,9 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.notes.Database.UserEntity;
 import com.example.notes.Fragments.NewNoteFragment;
 import com.example.notes.Fragments.NoteItemFragment;
 import com.example.notes.Fragments.NotesFragment;
@@ -33,7 +29,6 @@ import com.example.notes.UiModify.ToolbarHamburgerIcon;
 import com.example.notes.ViewModels.HomeActivityandFragmentsViewModel;
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.List;
 
 public class HomeActivity extends AppCompatActivity implements NotesFragment.newNoteMessage, NoteItemFragment.UpdateNote,TrashedNotesFragment.TrashedNote{
 
@@ -106,9 +101,6 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
             }
         });
 
-    }
-    public String getUserId(){
-        return userId;
     }
 
     @Override
@@ -187,7 +179,7 @@ public class HomeActivity extends AppCompatActivity implements NotesFragment.new
     }
     public void setToolbarColor(boolean isColor){
         if(isColor){
-            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar_color)));
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.app_background_color)));
         }
         else {
             getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.white)));

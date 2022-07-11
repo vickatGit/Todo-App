@@ -8,5 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="toolbar_color">#e6e6e6</color>
+    <color name="app_background_color">#e6e6e6</color>
+    <color name="fab_background">#427dde</color>
 
 </resources>

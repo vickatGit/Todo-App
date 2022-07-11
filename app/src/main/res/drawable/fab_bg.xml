@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="ring"
+    android:useLevel="false"
+    android:innerRadius="0dp"
+    >
+
+    <solid
+        android:color="@color/fab_background"/>
+    <stroke
+        android:width="0dp"
+        android:color="@color/fab_background"/>
 
 </shape>

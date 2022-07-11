@@ -4,7 +4,7 @@
     android:tag="notes_tag"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#e6e6e6"
+    android:background="@color/app_background_color"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.NotesFragment">
@@ -31,8 +31,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:backgroundTint="#427dde"
+
+            android:backgroundTint="@color/fab_background"
             android:scaleType="center"
+            app:borderWidth="0dp"
             app:tint="@android:color/white"
             android:src="@drawable/add_icon"
 
