@@ -12,5 +12,5 @@
 ## 🔥 Services Used
 
 1. **Bcrypt** - for encrypting data (passwords)
-1. **Firebase** - for storing user details
+1. **Firebase** - for storing user details and todo's
 1. **Room** - for storing user details in SQLite
