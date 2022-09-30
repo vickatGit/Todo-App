@@ -1,6 +1,6 @@
 <h1 align="center">Todo App</h1>
 <img src="https://firebasestorage.googleapis.com/v0/b/food-clone-c7e62.appspot.com/o/todo_readme_cropped.jpg?alt=media&token=5a833886-7d25-42b7-9c91-9751861abe44">
-
+<h3>MVVM Based</h3>
 
 ## 🔥 Features
 
